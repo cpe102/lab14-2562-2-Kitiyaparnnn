@@ -21,12 +21,23 @@ int main(){
 //Write definition of shuffle() here 
 void shuffle(int &a,int &b, int &c, int &d){
 	
-	int *num[4]={&a,&b,&c,&d};
+	/*int *num[4]={&a,&b,&c,&d};
+
 	for(int i=0;i<5;i++){
-	int p=rand()%4,l=rand()%4;	
-	int first=*num[p];
-	*num[p]=*num[l];
-	*num[l]=first;
+		int p=rand()%4,l=rand()%4;	
+		int first=*num[p];
+			*num[p]=*num[l];
+			*num[l]=first;
+	}*/
+	int num[4]={a,b,c,d};
+	for(int i=0;i<5;i++){
+		int p=rand()%4,l=rand()%4;	
+		int first=num[p];
+			num[p]=num[l];
+			num[l]=first;
 	}
-	
+	a=num[0];
+	b=num[1];
+	c=num[2];
+	d=num[3];	
 }
